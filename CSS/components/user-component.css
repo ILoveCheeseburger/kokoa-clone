@@ -1,0 +1,60 @@
+.user-component {
+  justify-content: space-between; /*가운데 공백 두고 좌우 배치 채널프사랑 channel 이 한묶음이고 2>이 한 묶음이라서 저렇게 구현이 가능.*/
+}
+
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.user-component__subtitle {
+  margin-top: 8px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__avatar--xl {
+  /*위에 user-component__avatar 와 같지만 크기만 좀 다름*/
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.user-component__avatar--sm {
+  /*위에 user-component__avatar 와 같지만 크기만 좀 다름*/
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+
+.user-component__column:last-child {
+  /*channel 옆에 있는 2> 색 수정*/
+  color: rgba(0, 0, 0, 0.4);
+  display: flex; /*이건 그 읽음 표시 그거임 빨간 1 동그라미*/
+  flex-direction: column;
+  align-items: flex-end; /*그 동그라미 오른쪽으로 보내기 -> 근데 이렇게 하면 프렌드에 채널 오른쪽 2> 도 역시 세로정렬되기 때문에 friens.html 가서 이거 <div>에 넣어줘야함. */
+}
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
+}

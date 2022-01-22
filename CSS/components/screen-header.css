@@ -1,0 +1,17 @@
+.screen-header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /*가로로 일렬 정렬*/
+  align-items: center; /*가로축 중심 맞추기*/
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+}
+
+.screen-header__title {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.header-header__icons span {
+  margin-left: 25px;
+}

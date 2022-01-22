@@ -1,0 +1,18 @@
+#chat-screen {
+  /*톡방 배경임메!!*/
+  background-color: rgba(7, 110, 79, 0.4);
+  height: 11000vh; /*채팅창 겁나 길게....*/
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0; /*맨 위 고정*/
+  position: fixed; /*위에서 채팅창을 길게 했으므로 스크롤이 가능함... 스크롤해도 고정되도록.*/
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(7, 110, 79, 0.4);
+}
+
+.main-chat {
+  margin-top: 130px;
+}

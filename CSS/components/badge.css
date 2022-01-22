@@ -1,0 +1,13 @@
+.badge {
+  /*빨간색 1 동그라미가 여러번 쓰이기 때문에 그냥 뱃지 클래스를 만들어줌!!!!*/
+  background-color: tomato;
+  width: 30px;
+  height: 30px; /*span 은 너미와 높이 값을 갖지 않기 때문에 "display : block"이 필요하다.*/
+  border-radius: 15px; /*아예 원으로 만들고 싶다면 너비의 절반을 border-radius 의 값으로 설정해주면 된다.*/
+  display: flex; /*가운데 정렬하는 거임 밑에 두줄까지*/
+  justify-content: center;
+  align-items: center;
+  /* display: block;  근데 블럭 설정 땜에 위에 플렉스랑, 가운데 정렬 설정이 먹히지 않기 때문에 지우자. */
+  color: white;
+  font-weight: 600;
+}

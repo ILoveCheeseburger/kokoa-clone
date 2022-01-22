@@ -1,0 +1,18 @@
+.welcome-header {
+  margin: 90px 0px; /* 위 아래 공백 */
+  text-align: center; /* 텍스트 위치 가운데로 */
+  display: flex; /* 이렇게 하면 가로로배치되므로 밑의 코드가 필요*/
+  flex-direction: column; /* 축을 세로로 바꿔줌*/
+  align-items: center; /*세로 가운데로 배치*/
+  font-weight: 600; /*폰트 굵기*/
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  width: 65%;
+  opacity: 0.7; /*좀 흐릿하게*/
+}

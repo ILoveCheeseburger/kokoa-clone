@@ -1,0 +1,36 @@
+.nav {
+  position: fixed; /*밑의 정보로 위치 고정*/
+  bottom: 0;
+  width: 100%; /*이거 없이 위에거로만 하면 밑에서 짜부됨*/
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box; /*위에 position, bottom, width 만 있으면 맨 오른쪽 아이콘이 안보임...ㅜㅜ*/
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+
+.nav__notification {
+  /*밑에 주석 부분은 badge 클래스로 이동*/
+  /* background-color: tomato;
+  width: 30px;
+  height: 30px; span 은 너미와 높이 값을 갖지 않기 때문에 "display : block"이 필요하다.
+  border-radius: 15px; 아예 원으로 만들고 싶다면 너비의 절반을 border-radius 의 값으로 설정해주면 된다.
+  display: flex; 가운데 정렬하는 거임 밑에 두줄까지
+  justify-content: center;
+  align-items: center;
+  display: block;  근데 블럭 설정 땜에 위에 플렉스랑, 가운데 정렬 설정이 먹히지 않기 때문에 지우자.
+  color: white;
+  font-weight: 600; */
+  position: absolute; /*이걸 absolute 로 하고, 감싸는 엘리멘트 기준 오른쪽 위에 위치하기 위해서는 감싸는 엘리먼트가 relative여야함....*/
+  left: 15px;
+  bottom: 15px;
+}

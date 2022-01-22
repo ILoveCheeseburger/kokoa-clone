@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat w/ Chzburger - Kokoa Talk</title>
+</head>
+<body id = "chat-screen">
+    <div class = "status-bar">
+        <div class = "status-bar__column"> <!-- class 의 이름이 길다고 해서 안좋은 이름이 아니다.. 잘 알아볼 수 만 있으면 좋은 naming 부모와 자식을 명시하면서 naming 을 하면 구별이 쉽다!!-->
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+            <!-- To Do : Wifi Icon -->
+        </div> 
+        <div class = "status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class = "status-bar__column">
+            <span>70%</span>
+            <i class="fas fa-battery-three-quarters"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <!-- header.alt-header>div.alt-header__column*3 -->
+
+    <header class="alt-header">
+        <div class="alt-header__column">
+            <a href = "chats.html">
+                <i class = "fas fa-angle-left fa-2x"></i>
+            </a>  <!-- 뒤돌아가기 누르면 다시 more.html 로 돌아감-->
+        </div>
+        <div class="alt-header__column">
+            <h1 class = "alt-header__title">Chzburger</h1>
+        </div>
+        <div class="alt-header__column">
+            <i class = "fas fa-search fa-lg"></i>
+            <i class = "fas fa-bars fa-lg"></i>
+        </div>
+    </header>
+
+    <main class = "main-screen main-chat"> <!--클래스 두개에 속함--> 
+        <div class = "chat__timestamp">
+            Sunday, Jan 23, 2022
+        </div>
+    </main>
+
+
+    <!-- nav>ul>li*4>a 단축키 치면 아래처럼 됨. -->
+
+    <script src="https://kit.fontawesome.com/73c3ae3b26.js"
+            crossorigin="anonymous">
+    </script>
+</body>
+</html>

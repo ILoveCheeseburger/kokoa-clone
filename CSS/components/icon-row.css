@@ -1,0 +1,18 @@
+.icon-row {
+  display: flex; /*가로축*/
+  justify-content: space-between;
+}
+
+.icon-row__icon {
+  display: flex;
+  flex-direction: column; /*세로축으로 바꿔줌*/
+  align-items: center; /*세로축 가운데 정렬*/
+}
+
+.icon-row i {
+  font-size: 35px;
+}
+
+.icon-row span {
+  margin-top: 18px; /*아이콘이랑 그 밑에 아이콘 제목 사이 공간*/
+}

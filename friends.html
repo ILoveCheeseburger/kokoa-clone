@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freinds - Kokoa Talk</title>
+</head>
+<body>
+    <div class = "status-bar">
+        <div class = "status-bar__column"> <!-- class 의 이름이 길다고 해서 안좋은 이름이 아니다.. 잘 알아볼 수 만 있으면 좋은 naming 부모와 자식을 명시하면서 naming 을 하면 구별이 쉽다!!-->
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+            <!-- To Do : Wifi Icon -->
+        </div> 
+        <div class = "status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class = "status-bar__column">
+            <span>70%</span>
+            <i class="fas fa-battery-three-quarters"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="screen-header">
+        <h1 class = "screen-header__title">Friends</h1>
+        <div class="header-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span>
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+    </header>
+
+    <a id="friends-display-link">
+        <i class="fas fa-info-circle"></i>
+        Friends' Names Display 
+        <i class = "fas fa-chevron-right fa-xs"></i>
+    </a> <!-- 이 부분은 유니크한 부분임. 다른 곳에서 쓰이지 않으니 id 로 함. -->
+
+    <main class = "friends-screen"> <!--원래 밑에것만 따로 있고 main 안에는 없었는데, 본인 프로필이랑, 친구 프로필을 한번에 묶기 위해서 main 만든거임-->
+        <div class = "user-component">
+            <div class="user-component__column">
+                <img 
+                    src="Cheeseburger.jpg" 
+                    class = "user-component__avatar user-component__avatar--xl" 
+                /> <!--같은 사진인데, 크기 다른걸로 해서 두번 씀...-->
+                <div class = "user-component__text">
+                    <h4 class="user-component__title">Chzburger</h4>
+                    <!-- <h6 class="user-component__subtitle">this text whatever</h6> <!--여기서는 안씀... 다른 곳에서 쓸거 미리 만들어놓은 거니까 냅두자-->
+                </div>
+            </div>
+            <div class="user-component__column"></div>
+        </div>
+
+        <div class="friends-screen__channel"> <!-- 본인 프로필 밑에 채널 카톡친구 있는 칸 위에 그 뭐시기.-->
+            <div class="friends-screen__channel-header">
+                <span>Channel</span>
+                <i class = "fas fa-chevron-up fa-xs"></i>
+            </div>
+        </div>
+
+        <div class = "user-component">
+            <div class="user-component__column">
+                <img
+                    src="Cheeseburger.jpg" 
+                    class = "user-component__avatar user-component__avatar--sm" 
+                /> <!--같은 사진인데, 크기 다른걸로 해서 두번 씀...-->
+                <div class = "user-component__text">
+                    <h4 class="user-component__title user-component__title--not-bold">Channel</h4> <!-- 글자 굵은 버전 얇은 버전.... 채널 폰트가 프로필보다 얇음.-->
+                </div>
+            </div>
+            <div class="user-component__column">
+                <div> <!-- span의 father 이기 때문에 flex 방향에 영향을 안받음.-->
+                    <span>2</span> <!-- 그 채널 카톡친구 여는거 그거임-->
+                    <i class = "fas fa-chevron-right fa-xs"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- nav>ul>li*4>a 단축키 치면 아래처럼 됨. -->
+    <nav class = "nav"> 
+        <ul class = "nav__list"> 
+            <li class = "nav__btn">
+                <a class="nav__link" href="friends.html">
+                    <i class="fas fa-user fa-2x"></i>
+                </a> <!-- 아이콘 모양 클릭하면 friends.html 가는 거임.-->
+            </li> 
+            <li class = "nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class = "nav__notification badge">1</span> <!-- 카톡 메세지 있으면 숫자뜨는거 구현하는거임-->
+                    <i class="far fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class = "nav__btn">
+                <a class="nav__link" href="find.html">
+                    <i class="fas fa-search fa-2x"></i>
+                </a>
+            </li>
+            <li class = "nav__btn">
+                <a class="nav__link" href="more.html">
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <script src="https://kit.fontawesome.com/73c3ae3b26.js"
+            crossorigin="anonymous">
+    </script>
+</body>
+</html>

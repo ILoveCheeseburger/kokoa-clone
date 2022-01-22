@@ -1,0 +1,55 @@
+#login-form {
+  /* 이건 id 임. class 가 아니기 때문에 . 가 아닌 #을 사용*/
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none; /*입력칸 모서리 없애기.*/
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+#login-form input:not([type="submit"]) {
+  /* input 타입이 submit 이 아닐때....(여기있던 코드 원래 위에 있던 거임...)*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out; /*밑에 포커스상태일때, 경계선 변하는 작업.*/
+}
+
+#login-form input::placeholder {
+  /*:: pssudo element 사용*/
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  /*state:focus 일때 (키보드가 거기에 있을 때)*/
+  outline: none; /*키보드로 칠때 가장자리 테두리 생기는거 없애기 근데 이거 
+    reset.css 에다가 input:focus {outline : none} 해도 됨. 
+    근데 이거 여기에서 말고 다른 입력할때도 마찬가지 일때도 해야하니까 그냥
+    reset.css 에다가 써주자... 여기다가 하면 로그인 폼에서만 됨....*/
+
+  border-color: var(
+    --purple
+  ); /*입력할때, 밑에 밑줄(위에서 경계선 밑만 살려둠) 색 변하게함.. 무친!!!!!!*/
+}
+
+/* 내맘대로 추가!!!!focus 시 placeholder 색을 바꿔봄!!!! */
+#login-form input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--purple);
+  cursor: pointer; /*버튼위에 마우스 올라가면 마우스 모양 마뀜.*/
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit; /*원래 링크 색은 파란색인데 이걸 검정색으로 바꿔줌... 원래 디폴트가 검정.*/
+  font-size: 13px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Kokoa Talk</title>
+</head>
+<body>
+    <div class = "status-bar">
+        <div class = "status-bar__column"> <!-- class 의 이름이 길다고 해서 안좋은 이름이 아니다.. 잘 알아볼 수 만 있으면 좋은 naming 부모와 자식을 명시하면서 naming 을 하면 구별이 쉽다!!-->
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+            <!-- To Do : Wifi Icon -->
+        </div> 
+        <div class = "status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class = "status-bar__column">
+            <span>70%</span>
+            <i class="fas fa-battery-three-quarters"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <!-- header.alt-header>div.alt-header__column*3 -->
+
+    <header class="alt-header">
+        <div class="alt-header__column">
+            <a href = "more.html"><i class = "fas fa-angle-left fa-2x"></i></a>  <!-- 뒤돌아가기 누르면 다시 more.html 로 돌아감-->
+        </div>
+        <div class="alt-header__column">
+            <h1 class = "alt-header__title">Settings</h1>
+        </div>
+        <div class="alt-header__column">
+            <i class = "fas fa-search fa-lg"></i>
+        </div>
+    </header>
+
+    <main class = "main-screen">
+        <ul class = "settings-list">
+            <li class = "settings__setting">
+                <div class = "settings__setting-column">
+                    <i class = "fas fa-bullhorn"></i>
+                    <span>Notice</span>
+                </div>
+                <div class = "settings__setting-column"></div>
+            </li>
+
+            <li class = "settings__setting">
+                <div class = "settings__setting-column">
+                    <i class = "fas fa-flask"></i>
+                    <span>Kokoa lab</span>
+                </div>
+                <div class = "settings__setting-column"></div>
+            </li>
+
+            <li class = "settings__setting">
+                <div class = "settings__setting-column">
+                    <i class = "fas fa-info-circle"></i>
+                    <span>Version</span>
+                </div>
+                <div class = "settings__setting-column">Latest Version</div>
+            </li>
+        </ul>
+    </main>
+
+
+    <!-- nav>ul>li*4>a 단축키 치면 아래처럼 됨. -->
+    <nav class = "nav"> 
+        <ul class = "nav__list"> 
+            <li class = "nav__btn">
+                <a class="nav__link" href="friends.html">
+                    <i class="far fa-user fa-2x"></i> <!-- 비어있는 사람 -->
+                </a> <!-- 아이콘 모양 클릭하면 friends.html 가는 거임.-->
+            </li> 
+            <li class = "nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class = "nav__notification badge">1</span> <!-- 카톡 메세지 있으면 숫자뜨는거 구현하는거임-->
+                    <i class="far fa-comment fa-2x"></i> <!-- chat 화면이니까 밑에 말풍선이 차있어야하고, 사람 부분이 비어있어야함.-->
+                </a>
+            </li>
+            <li class = "nav__btn">
+                <a class="nav__link" href="find.html">
+                    <i class="fas fa-search fa-2x"></i>
+                </a>
+            </li>
+            <li class = "nav__btn">
+                <a class="nav__link" href="more.html">
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <script src="https://kit.fontawesome.com/73c3ae3b26.js"
+            crossorigin="anonymous">
+    </script>
+</body>
+</html>
