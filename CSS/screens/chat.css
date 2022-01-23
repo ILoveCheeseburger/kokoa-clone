@@ -1,6 +1,6 @@
 #chat-screen {
   /*톡방 배경임메!!*/
-  background-color: rgba(7, 110, 79, 0.4);
+  background-color: #cae3cd;
   height: 11000vh; /*채팅창 겁나 길게....*/
 }
 
@@ -10,9 +10,164 @@
   position: fixed; /*위에서 채팅창을 길게 했으므로 스크롤이 가능함... 스크롤해도 고정되도록.*/
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(7, 110, 79, 0.4);
+  background-color: #cae3cd;
+  /*스크롤 하면 대화 내용이나 시간이 위에 status-bar 나 alt-header 와 겹쳐지기 때문에 
+  이 두가지뒤에 배경을 씌어서, 대화내용이 겹쳐질때 그 내용이 색에 묻혀서 안보이게 하는거임*/
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+}
+
+#chat-screen .alt-header {
+  top: 0px;
+  z-index: 1;
 }
 
 .main-chat {
-  margin-top: 130px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message__author {
+  margin-bottom: 5px;
+  display: block; /*span 은 inline 이기 때문에 마진 적용하려면 block으로*/
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end; /*밑으로 보내줌*/
+}
+
+.message__author,
+.message__time {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--purple);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+/* .message-row--own .message__bubble {
+  order: 1;
+}
+
+.message-row--own .message__time {
+  order: 0;
+} */
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  box-sizing: border-box; /*입력칸 길이 땜에 */
+  align-items: center;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+  margin-left: 0px;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative; /*이모티콘이랑, 전송 버튼을 입력 칸위에 올리려고*/
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  padding: 15px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.reply input::placeholder {
+  font-size: 17px;
+}
+
+/*임티 아이콘과, 버튼*/
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+/*밑에는 이모티콘 아이콘임. 위에 설정해서 추가로 임티 아이콘은 좀더 왼쪽으로 가야함.*/
+.reply__column:last-child > i {
+  /*직계 자식 아이콘만 해당*/
+  right: 50px;
+  top: 8px;
+}
+
+.reply__column button {
+  background-color: var(--purple);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
 }

@@ -19,6 +19,7 @@
 
 .alt-header__column:first-child {
   margin-right: auto;
+  margin-left: 0px;
 }
 
 .alt-header__column:nth-child(2) {
@@ -32,6 +33,7 @@
   justify-content: flex-end; /*chat.css 땜에 추가*/
 }
 
-.alt-header__column i:last-child {
+.alt-header__column span:last-child {
+  /*span 을 i 로 했다가, 저 열에 있는 아이콘 3개다 왼쪽 마진 생겨벌임 미친*/
   margin-left: 20px;
 }
