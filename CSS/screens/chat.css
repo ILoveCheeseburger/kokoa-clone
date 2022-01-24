@@ -125,11 +125,7 @@
   box-sizing: border-box; /*입력칸 길이 땜에 */
   align-items: center;
   transition: transform 0.3s ease-in-out;
-<<<<<<< Updated upstream
   /*이거는 그 input 선택하면 클릭하면 바 내려가는 거에 대한 거임*/
-=======
-  /*이거는 그 input 선택하면 클릭하면 바 내려가는 거에 대한거임*/
->>>>>>> Stashed changes
 }
 
 .reply .reply__column:first-child {
@@ -153,11 +149,7 @@
   border-radius: 25px;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
-<<<<<<< Updated upstream
   /* 이건 input 부분에만 넣은 것이기 때문에, 플러스랑 임티 아이콘에다가도 transition 해야함.*/
-=======
-  /* 이건 input 부분에만 넣은것이기 때문에, 플러스랑 임티 아이콘에다가도 적용해줘야함 transition*/
->>>>>>> Stashed changes
 }
 
 .reply input::placeholder {
@@ -205,7 +197,6 @@
 .reply:focus-within .reply__column:first-child,
 .reply:focus-within .fa-smile-wink,
 .reply:focus-within button {
-<<<<<<< Updated upstream
   /*reply 내부에 어떤 element 가 focus 되어있다면.... 다음의 엘리먼트에서 밑의 코드를 실행한다...*/
   opacity: 0;
 }
@@ -215,18 +206,6 @@
 
   transform: translateX(-11%) translateY(-80px);
   /*밑에 코드로 인풋 뒤 배경 바가 내려가지만 그 반대만큼 인풋을 올려서 띄어버리는 거임*/
-=======
-  /*reply 내부에 어떤 element 가 focus 되어있따면, reply_column:first-child 에서 밑에거를 실행*/
-  opacity: 0;
-}
-
-/*.reply input:focus 로 해도 ㄱㄴ*/
-.reply:focus-within input {
-  width: 96vw; /*밑에줄이 없으면, 인풋 엘리먼트 왼쪽이 비어서, 왼쪽으로 좀 옮겨줘야함.*/
-
-  transform: translateX(-11%) translateY(-80px);
-  /*밑에 코드로 인풋뒤 배경 바가 내려가지만 그 반대만큼 인풋을 올려서 띄어버리는 거임*/
->>>>>>> Stashed changes
 }
 
 .reply:focus-within {
